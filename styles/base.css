@@ -1,0 +1,38 @@
+﻿:root {
+    --primary: #56ab2f;
+    --secondary: #a8e063;
+}
+
+.bg-base-gradient {
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.form, .br-10 {
+    border-radius: 10px;
+}
+
+.br-end-10 {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.br-start-10 {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.btn-base {
+    background-color: var(--primary);
+    color: white;
+    padding: 8px 20px;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+input[type=radio] {
+    accent-color: darkgreen;
+}
+
+.menu-item {
+    min-height: 50px !important;
+}
