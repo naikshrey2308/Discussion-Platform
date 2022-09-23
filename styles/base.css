@@ -35,4 +35,10 @@ input[type=radio] {
 
 .menu-item {
     min-height: 50px !important;
+    cursor:pointer;
 }
+
+    .menu-item:hover {
+        cursor: pointer;
+        background-color: lightgrey;
+    }
