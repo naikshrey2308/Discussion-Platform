@@ -24,6 +24,15 @@ namespace DiscussionPanel
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// EmailValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailValidator;
+
+        /// <summary>
         /// ProfileEmail control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace DiscussionPanel
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ProfileEmail;
+
+        /// <summary>
+        /// NameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NameValidator;
 
         /// <summary>
         /// ProfileName control.
@@ -60,21 +78,21 @@ namespace DiscussionPanel
         protected global::System.Web.UI.WebControls.RadioButtonList ProfileGender;
 
         /// <summary>
-        /// LogoutBtn control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogoutBtn;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// updateProfileBtn control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateProfileBtn;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

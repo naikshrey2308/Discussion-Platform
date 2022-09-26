@@ -42,3 +42,12 @@ input[type=radio] {
         cursor: pointer;
         background-color: lightgrey;
     }
+
+.textarea {
+    resize: none;
+}
+
+.textarea:active, .textarea:focus {
+    outline: none;
+    border: none;
+}
