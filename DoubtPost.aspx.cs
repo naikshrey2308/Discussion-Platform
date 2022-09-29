@@ -18,14 +18,16 @@ namespace DiscussionPanel
                 Response.Redirect("LoginPage.aspx", true);
             }
         }
+
         protected void PostDoubtBtn_Click(object sender, EventArgs e)
         {
             string heading = DoubtHeading.Text;
             string content = DoubtContent.Text;
+            string category = SelectCategory.Text;
 
             string connString = ConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
             string queryString = "" +
-                "INSERT INTO DOUBTS (creator, heading, content) VALUES (@creator, @heading, @content)";
+                "INSERT INTO DOUBTS (creator, heading, content,category) VALUES (@creator, @heading, @content,category)";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {

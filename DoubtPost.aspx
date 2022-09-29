@@ -23,6 +23,14 @@
             <br />
             <img src="images/doubt.svg" width="200px" class="d-block mx-auto" />
             <br />
+                <asp:DropDownList ID="SelectCategory" CssClass="btn btn-default dropdown-toggle " runat="server" >
+                    <asp:ListItem CssClass="dropdown-item p-5" Selected="True">Select category</asp:ListItem>
+                    <asp:ListItem CssClass="p-5 dropdown-item">Food</asp:ListItem>
+                    <asp:ListItem CssClass="dropdown-item">Science</asp:ListItem>
+                    <asp:ListItem CssClass="dropdown-item">Sports</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
                <asp:TextBox ID="DoubtHeading" CssClass="form-control" placeholder="Add a heading for your doubt ..." runat="server"></asp:TextBox>
                <br />
                <asp:TextBox ID="DoubtContent" runat="server" CssClass="form-control  p-3 textarea" Rows="12" Columns="95" placeholder="Where are you stuck? Write your doubt here." TextMode="MultiLine"></asp:TextBox>
