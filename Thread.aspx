@@ -27,6 +27,9 @@
                                     <asp:Label ID="HeadingLabel" CssClass="w-100" runat="server" Text='<%# Eval("Heading") %>' />
                                     <p class="text-end"><span class="rounded-pill bg-success badge"><%# Eval("Category") %></span></p>
                                 </div>
+                                <div class="my-1 text-secondary">
+                                    <p><%# Eval("Content") %></p>
+                                </div>
                                 <div class="text-end">
                                     <asp:Label ID="CreatorLabel" CssClass="fst-italic text-secondary small" runat="server" Text='<%# Eval("Creator") %>' />
                                 </div>
@@ -69,7 +72,10 @@
                             </div>
                         </ItemTemplate>
                     </asp:DataList>
-                    <asp:SqlDataSource ID="ShowReplies" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT * FROM [Reply] ORDER BY [Id] DESC">
+                    <asp:SqlDataSource ID="ShowReplies" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT * FROM [Reply] WHERE ([Doubt] = @Doubt) ORDER BY [Id] DESC">
+                        <SelectParameters>
+                            <asp:QueryStringParameter Name="Doubt" QueryStringField="id" Type="Int32" />
+                        </SelectParameters>
                     </asp:SqlDataSource>
                     <br />
                 </div>
