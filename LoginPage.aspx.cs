@@ -38,7 +38,7 @@ namespace DiscussionPanel
                     if (reader.HasRows) {
                         // Response.Write("User logged in successfully!");
                         Session["user"] = email;
-                        Response.Redirect("ViewDiscussions.aspx", true);
+                        Response.Redirect("Home.aspx", true);
                     } else {
                         Response.Write("Email or Password supplied are incorrect!");
                     } 

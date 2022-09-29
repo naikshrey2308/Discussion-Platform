@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserDiscussions.aspx.cs" Inherits="DiscussionPanel.UserDiscussions" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="DiscussionPanel.Home" %>
 
 <!DOCTYPE html>
 
@@ -32,10 +32,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT * FROM [Doubts] WHERE ([Creator] = @Creator) ORDER BY [Id] DESC">
-                <SelectParameters>
-                    <asp:SessionParameter Name="Creator" SessionField="user" Type="String" />
-                </SelectParameters>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT * FROM [Doubts] ORDER BY [Id] DESC">
             </asp:SqlDataSource>
         </p>
     </form>

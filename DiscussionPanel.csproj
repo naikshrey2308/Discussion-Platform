@@ -73,6 +73,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="DoubtPost.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="images\1.png" />
     <Content Include="images\2.png" />
     <Content Include="images\discussions.svg" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="DoubtPost.aspx.designer.cs">
       <DependentUpon>DoubtPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
