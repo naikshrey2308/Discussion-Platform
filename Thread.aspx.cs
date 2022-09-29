@@ -41,7 +41,7 @@ namespace DiscussionPanel
                     conn.Close();
 
                     ReplyContent.Text = "";
-                    Console.WriteLine("✅ Discussion Thread Started");
+                    Response.Redirect($"Thread.aspx?id={Request.QueryString["id"]}");
                 }
                 catch (Exception ex)
                 {
