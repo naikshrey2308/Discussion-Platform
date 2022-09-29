@@ -51,3 +51,8 @@ input[type=radio] {
     outline: none;
     border: none;
 }
+
+.discuss-item:hover {
+    cursor: pointer;
+    background-color: #EEE;
+}

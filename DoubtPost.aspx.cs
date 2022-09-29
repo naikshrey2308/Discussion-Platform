@@ -27,7 +27,7 @@ namespace DiscussionPanel
 
             string connString = ConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
             string queryString = "" +
-                "INSERT INTO DOUBTS (creator, heading, content,category) VALUES (@creator, @heading, @content,category)";
+                "INSERT INTO DOUBTS (creator, heading, content, category) VALUES (@creator, @heading, @content, @category)";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -35,6 +35,7 @@ namespace DiscussionPanel
                 cmd.Parameters.AddWithValue("@creator", Session["user"]);
                 cmd.Parameters.AddWithValue("@heading", heading);
                 cmd.Parameters.AddWithValue("@content", content);
+                cmd.Parameters.AddWithValue("@category", category);
 
                 try
                 {

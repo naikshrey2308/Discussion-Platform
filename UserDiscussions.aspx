@@ -12,15 +12,18 @@
     <form id="form1" runat="server">
     <div class="min-vh-100 row gx-0">
        <!-- #include file="~/Navbar.html" -->
-        <div class="col-3">&nbsp;</div>
-        <div class="col-8 mx-auto p-5 br-10 my-5">
+        <div class="col-2">&nbsp;</div>
+        <div class="col-7 mx-auto p-5 br-10 my-5">
             <asp:DataList ID="DataList1" CssClass="w-100" runat="server" DataSourceID="SqlDataSource1">
                 <ItemTemplate>
-                    <div class="alert p-3">
-                        <asp:Label ID="HeadingLabel" runat="server" Text='<%# Eval("Heading") %>' />
-                    </div>
-                    <div class="text-end">
-                        <asp:Label ID="CreatorLabel" runat="server" Text='<%# Eval("Creator") %>' />
+                    <div onclick="window.location.href='Thread.aspx?id=<%# Eval("Id") %>'" class="p-3 my-2 discuss-item container border br-10">
+                        <div class="d-flex">
+                            <asp:Label ID="HeadingLabel" CssClass="w-100" runat="server" Text='<%# Eval("Heading") %>' />
+                            <p class="text-end"><span class="rounded-pill bg-success badge"><%# Eval("Category") %></span></p>
+                        </div>
+                        <div class="text-end">
+                            <asp:Label ID="CreatorLabel" CssClass="fst-italic text-secondary small" runat="server" Text='<%# Eval("Creator") %>' />
+                        </div>
                     </div>
                 </ItemTemplate>
             </asp:DataList>
@@ -29,7 +32,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT [Heading], [Creator] FROM [Doubts] ORDER BY [Id] DESC"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserDiscussionsConn %>" SelectCommand="SELECT [Id], [Heading], [Creator], [Category] FROM [Doubts] ORDER BY [Id] DESC"></asp:SqlDataSource>
         </p>
     </form>
 </body>

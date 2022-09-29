@@ -77,6 +77,7 @@
     <Content Include="images\2.png" />
     <Content Include="images\discussions.svg" />
     <Content Include="images\doubt.svg" />
+    <Content Include="images\doubtpostbg.jpg" />
     <Content Include="images\home.svg" />
     <Content Include="images\plus.svg" />
     <Content Include="images\profile.svg" />
